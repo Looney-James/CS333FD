@@ -29,7 +29,7 @@ public class BartenderTest {
         assertEquals(expectedOutput, actualOutput);
 
     }
-	
+
 	@Test
     public void testManhattan() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
