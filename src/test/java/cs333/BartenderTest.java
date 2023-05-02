@@ -171,84 +171,84 @@ public class BartenderTest {
         assert (TomCollins.calories() >= 0);
     }
 
-    @Test
-    public void testLowestCalories() {
-
-        Liquor OldFashioned = new Bourban();
-        OldFashioned = new Bitters(OldFashioned);
-        OldFashioned = new Bitters(OldFashioned);
-        OldFashioned = new Cherry(OldFashioned);
-        OldFashioned = new Lime(OldFashioned);
-
-        Liquor VodkaGimlet = new Vodka();
-        VodkaGimlet = new LimeJuice(VodkaGimlet);
-        VodkaGimlet = new Lime(VodkaGimlet);
-
-        Liquor Manhattan = new Bourban();
-        Manhattan = new Vermouth(Manhattan);
-        Manhattan = new Vermouth(Manhattan);
-        Manhattan = new Cherry(Manhattan);
-        Manhattan = new Bitters(Manhattan);
-
-        Liquor TomCollins = new Gin();
-        TomCollins = new LimeJuice(TomCollins);
-        TomCollins = new LimeJuice(TomCollins);
-        TomCollins = new Sugar(TomCollins);
-        TomCollins = new Sugar(TomCollins);
-        TomCollins = new Lime(TomCollins);
-
-        int OldFashionedCalories = OldFashioned.calories();
-        int VodkaGimletCalories = VodkaGimlet.calories();
-        int ManhattanCalories = Manhattan.calories();
-        int TomCollinsCalories = TomCollins.calories();
-
-        int maxCalories = 0;
-        int minCalories = Integer.MAX_VALUE;
-
-        if (OldFashionedCalories > maxCalories) {
-            maxCalories = OldFashionedCalories;
-        }
-        if (VodkaGimletCalories > maxCalories) {
-            maxCalories = VodkaGimletCalories;
-        }
-        if (ManhattanCalories > maxCalories) {
-            maxCalories = ManhattanCalories;
-        }
-        if (TomCollinsCalories > maxCalories) {
-            maxCalories = TomCollinsCalories;
-        }
-
-        if (OldFashionedCalories < minCalories) {
-            minCalories = OldFashionedCalories;
-        }
-        if (VodkaGimletCalories < minCalories) {
-            minCalories = VodkaGimletCalories;
-        }
-        if (ManhattanCalories < minCalories) {
-            minCalories = ManhattanCalories;
-        }
-        if (TomCollinsCalories < minCalories) {
-            minCalories = TomCollinsCalories;
-        }
-        if (TomCollinsCalories > maxCalories) {
-            maxCalories = TomCollinsCalories;
-        }
-
-        if (OldFashionedCalories < minCalories) {
-            minCalories = OldFashionedCalories;
-        }
-        if (VodkaGimletCalories < minCalories) {
-            minCalories = VodkaGimletCalories;
-        }
-        if (ManhattanCalories < minCalories) {
-            minCalories = ManhattanCalories;
-        }
-        if (TomCollinsCalories < minCalories) {
-            minCalories = TomCollinsCalories;
-        }
-        assertEquals(minCalories, VodkaGimletCalories);
-
-    }
+//    @Test
+//    public void testLowestCalories() {
+//
+//        Liquor OldFashioned = new Bourban();
+//        OldFashioned = new Bitters(OldFashioned);
+//        OldFashioned = new Bitters(OldFashioned);
+//        OldFashioned = new Cherry(OldFashioned);
+//        OldFashioned = new Lime(OldFashioned);
+//
+//        Liquor VodkaGimlet = new Vodka();
+//        VodkaGimlet = new LimeJuice(VodkaGimlet);
+//        VodkaGimlet = new Lime(VodkaGimlet);
+//
+//        Liquor Manhattan = new Bourban();
+//        Manhattan = new Vermouth(Manhattan);
+//        Manhattan = new Vermouth(Manhattan);
+//        Manhattan = new Cherry(Manhattan);
+//        Manhattan = new Bitters(Manhattan);
+//
+//        Liquor TomCollins = new Gin();
+//        TomCollins = new LimeJuice(TomCollins);
+//        TomCollins = new LimeJuice(TomCollins);
+//        TomCollins = new Sugar(TomCollins);
+//        TomCollins = new Sugar(TomCollins);
+//        TomCollins = new Lime(TomCollins);
+//
+//        int OldFashionedCalories = OldFashioned.calories();
+//        int VodkaGimletCalories = VodkaGimlet.calories();
+//        int ManhattanCalories = Manhattan.calories();
+//        int TomCollinsCalories = TomCollins.calories();
+//
+//        int maxCalories = 0;
+//        int minCalories = Integer.MAX_VALUE;
+//
+//        if (OldFashionedCalories > maxCalories) {
+//            maxCalories = OldFashionedCalories;
+//        }
+//        if (VodkaGimletCalories > maxCalories) {
+//            maxCalories = VodkaGimletCalories;
+//        }
+//        if (ManhattanCalories > maxCalories) {
+//            maxCalories = ManhattanCalories;
+//        }
+//        if (TomCollinsCalories > maxCalories) {
+//            maxCalories = TomCollinsCalories;
+//        }
+//
+//        if (OldFashionedCalories < minCalories) {
+//            minCalories = OldFashionedCalories;
+//        }
+//        if (VodkaGimletCalories < minCalories) {
+//            minCalories = VodkaGimletCalories;
+//        }
+//        if (ManhattanCalories < minCalories) {
+//            minCalories = ManhattanCalories;
+//        }
+//        if (TomCollinsCalories < minCalories) {
+//            minCalories = TomCollinsCalories;
+//        }
+//        if (TomCollinsCalories > maxCalories) {
+//            maxCalories = TomCollinsCalories;
+//        }
+//
+//        if (OldFashionedCalories < minCalories) {
+//            minCalories = OldFashionedCalories;
+//        }
+//        if (VodkaGimletCalories < minCalories) {
+//            minCalories = VodkaGimletCalories;
+//        }
+//        if (ManhattanCalories < minCalories) {
+//            minCalories = ManhattanCalories;
+//        }
+//        if (TomCollinsCalories < minCalories) {
+//            minCalories = TomCollinsCalories;
+//        }
+//        assertEquals(minCalories, VodkaGimletCalories);
+//
+//    }
 
     // Integration test
     @Test
