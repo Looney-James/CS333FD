@@ -38,8 +38,12 @@ After that, run the 'mvn package' command and it should build the files. A 'targ
  
  Screenshots for the outputs:
 
+Test coverage:
+![testfile](https://user-images.githubusercontent.com/70344808/235817983-47405829-68ac-4164-b4e5-0036b9f33de6.jpg)
 
- 
+ Docker output:
+
+![dockeroutput](https://user-images.githubusercontent.com/70344808/235818069-bbb941df-c1d5-434c-931f-bb4cb6c01b0f.jpg)
 
 
 
