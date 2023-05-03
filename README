@@ -1,3 +1,46 @@
-To run the pipeline:
+Documentation of steps:
 
-From this git repository, clone it into a project directory that you've created.
+
+How this pipeline works:
+
+First create a maven project using an IDE of your choice. In my case, I used Eclipse.
+With a previous Java project, move the files accordingly to the directories they are corresponded to:
+  -For example, move all the class files into the 'src/main/java' directory in the Maven build and the
+   test file into the 'src/test/java' file
+
+After that, edit the 'pom.xml' file that's already create as part of the Maven project and add the required
+ dependencies that your project needs.
+
+Adding the dependencies, the project should be able to run the test file you used and display the coverage and 
+if the tests passed or not.
+
+After that, run the 'mvn package' command and it should build the files. A 'target' directory will appear containing a 
+ '.jar' file. This file is what will be used for reading and running the program with Docker.
+ 
+ Create a 'Dockerfile' in the main directory of the project outside of the source files. Add the required pathways, actions,
+ commands, etc. so that you can build the image. Then, create a Docker account and get the desktop app and have it running
+ in the background.
+ 
+ 
+ After completeing the Dockerfile, run 'docker build -t <projectname> .' This will build the Docker image and have it 
+ be stored in your Docker Desktop app locally.
+ 
+ After building the image, use 'docker run <projectname>' to run the image and it should output your main file's outputs.
+ After that, commit all your files into GitHub through Eclipse by using GitHub tokens for permissions. 
+ 
+ After that, in GitHub,  in the 'Actions' tab create workflows for 'Maven' and 'Docker'. This will create .yml files
+ for each corresponding one. Write in the require dependencies and actions needed in the .yml files. The 'docker-image.yml' 
+ file should be able to push your Dockerfile stuff into Docker Hub and create a repository with your projects. The 'maven.yml' 
+ file should be able to build and run the tests without fail if the pom.xml file is done correctly.
+ 
+ From there you can pull the directory into your own Docker Desktop to run and create a container with them.
+ 
+ 
+ Screenshots for the outputs:
+
+
+ 
+
+
+
+
